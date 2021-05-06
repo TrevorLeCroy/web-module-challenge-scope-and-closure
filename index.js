@@ -33,7 +33,7 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   2. Which of the two uses a closure? How can you tell?
 
-  Both functions are closures, 
+  The first function is a closure because it contains another function that accesses a variable from outside of it. It still has access to that variable, without having to call counter maker again.
 
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?
