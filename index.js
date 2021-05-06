@@ -169,12 +169,14 @@ function scoreboard(getInningScoreCallback, inningCallback, innings) {
     let awayScore = inningScore.Away;
     awayTotalScore += inningScore.Away;
 
-    let inning = `Inning ${i}: Away ${awayScore} - ${homeScore}`
+    let inning = `Inning ${i+1}: Away ${awayScore} - ${homeScore}`
     scores.push(inning);
   }
 
   if(homeTotalScore === awayTotalScore) {
     scores.push(`This game will require extra innings: Away ${awayTotalScore} - Home ${homeTotalScore}`);
+  } else {
+    scores.push(`Final Score: Away ${awayTotalScore} - Home ${homeTotalScore}`)
   }
 
   return scores;
